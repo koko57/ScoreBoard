@@ -54,7 +54,7 @@ class PlayerBar extends Component {
       <Swipeable
         rightButtons={rightButtons}
         onRightActionRelease={() => removePlayer(name)}
-        rightActionActivationDistance={200}
+        rightActionActivationDistance={300}
         style={{ justifyContent: 'center' }}
         onRef={ref => (this.swipeable = ref)}
       >

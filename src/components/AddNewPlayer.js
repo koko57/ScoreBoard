@@ -58,7 +58,7 @@ export class AddNewPlayer extends Component {
           autoFocus
           placeholder="New Player"
         />
-        <AddPlayerButton onPress={this.addPlayer}>
+        <AddPlayerButton onPress={this.handleSubmit}>
           <Icon name="user-plus" size={25} color={'#222222'} />
         </AddPlayerButton>
       </PlayerInput>
