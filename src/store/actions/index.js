@@ -27,17 +27,20 @@ export const removePlayer = player => {
     payload: player
   };
 };
+
 export const resetAll = () => {
   return {
     type: RESET_ALL
   };
 };
+
 export const resetScore = name => {
   return {
     type: RESET_SCORE,
-    payload: name 
+    payload: name
   };
 };
+
 export const newGame = () => {
   return {
     type: NEW_GAME

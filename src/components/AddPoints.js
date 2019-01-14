@@ -55,7 +55,7 @@ class AddPoints extends Component {
       <InputWrapper color={this.props.color}>
         <AddPointsInput
           autoFocus
-          keyboardType="number-pad"
+          keyboardType="numeric"
           value={pointsToAdd}
           onChangeText={pointsToAdd => this.setState({ pointsToAdd })}
           onSubmitEditing={this.handleSubmit}

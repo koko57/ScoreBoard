@@ -18,11 +18,14 @@ const StartButton = styled(TouchableHighlight)`
   height: 50px;
   justify-content: center;
 `;
+const MainView = styled(View)`
+  flex: 1;
+  justify-content: center;
+`;
 
 class Main extends Component {
   state = {
     newGame: false,
-    players: [],
     addNewPlayer: false,
     playerName: ''
   };
@@ -43,8 +46,7 @@ class Main extends Component {
           this.props.newGame();
           this.setState({
             newGame: false,
-            addNewPlayer: false,
-            playerName: ''
+            addNewPlayer: false
           });
         }
       },
@@ -70,13 +72,13 @@ class Main extends Component {
   };
 
   render() {
-    const { addNewPlayer, playerName, newGame } = this.state;
+    const { addNewPlayer, newGame } = this.state;
     const { players } = this.props;
     if (!newGame) {
       return <StartBanner startGame={this.startGame} />;
     }
     return (
-      <View style={{ margin: 'auto', flex: 1, justifyContent: 'center' }}>
+      <MainView>
         <Navbar resetGame={this.resetGame} resetAll={this.resetAllScores} />
         <KeyboardAwareScrollView
           ref={ref => (this.scrollView = ref)}
@@ -88,7 +90,7 @@ class Main extends Component {
           keyboardShouldPersistTaps="always"
         >
           <FlatList
-            data={this.props.players.sort((a, b) => b.points - a.points)}
+            data={players.sort((a, b) => b.points - a.points)}
             renderItem={({ item }) => (
               <PlayerBar
                 color={item.id}
@@ -105,7 +107,7 @@ class Main extends Component {
             </StartButton>
           )}
         </KeyboardAwareScrollView>
-      </View>
+      </MainView>
     );
   }
 }
