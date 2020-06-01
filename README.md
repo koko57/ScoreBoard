@@ -1,4 +1,4 @@
-# Score Counter
+# ScoreBoard
 My first attempt at writing React Native app.
 
 ![](https://raw.githubusercontent.com/koko57/daGame/master/assets/img/app.gif)
