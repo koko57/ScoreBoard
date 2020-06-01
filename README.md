@@ -1,7 +1,7 @@
 # ScoreBoard
 My first attempt at writing React Native app.
 
-![](https://raw.githubusercontent.com/koko57/daGame/master/assets/img/app.gif)
+![](https://raw.githubusercontent.com/koko57/ScoreBoard/master/assets/img/app.gif)
 
 ## Built with
 React Native, Redux, Styled-Components
